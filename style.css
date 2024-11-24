@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    color:white;
+}
+body{
+    background-color: black;
+    overflow: hidden;
+}
+button{
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+input#calc{
+    outline:none;
+    border: 4px solid white;
+    overflow: auto;
+    font-family: monospace;
+    background-color: rgb(46, 46, 46);
+    width: 90%;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    font-size: 54px;
+    text-align: right;
+    height: 20vh;
+    cursor: text;
+}
+input#calc:focus{
+    border:4px solid gold;
+    background-color: rgb(73, 73, 73);
+}
+div#pad{
+    user-select: none;
+    display: grid;
+    text-align: center;
+    font-weight: bold;
+    height:25vh;
+    top:10px;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    gap:5px;
+    grid-template-rows: 90px 90px 90px 90px;
+    grid-template-columns: 90px 90px 90px 90px;
+    justify-content: center;
+}
+div#pad button{
+    font-size:50px;
+}
+button.zero{
+    grid-row: 5;
+    grid-column: 1;
+}
+button.cross{
+    grid-row:2 / span 2;
+    grid-column: 4;
+    background-color: red;
+}
+button.ac{
+    background-color: rgb(6, 197, 133);
+}
+button.equal_to{
+    grid-column: 4;
+    grid-row: 4;
+    background-color: orange;
+}
+button.operation{
+    background-color: white;
+    color:grey;
+}
+button:active{
+    box-shadow: 0px 0px 10px white;
+}
+button.calc{
+    background-color: dodgerblue;
+}
+div.container{
+    margin: auto;
+    height:98vh;
+    overflow: auto;
+    width:400px;
+    background-color: rgb(66, 66, 66);
+    outline:2px solid cyan;
+    box-shadow: 0px 0px 20px cyan,0px 0px 10px grey;
+}
